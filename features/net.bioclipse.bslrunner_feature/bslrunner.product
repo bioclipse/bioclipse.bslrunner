@@ -3,7 +3,6 @@
 
 <product uid="net.bioclipse.bslrunner" id="net.bioclipse.bslrunner.product" application="net.bioclipse.bslrunner.application" useFeatures="true" includeLaunchers="true">
 
-
    <configIni use="default">
    </configIni>
 
@@ -13,14 +12,12 @@
 
    <windowImages/>
 
-
-   <launcher>
+   <launcher name="bsl">
       <solaris/>
       <win useIco="false">
          <bmp/>
       </win>
    </launcher>
-
 
    <vm>
    </vm>
