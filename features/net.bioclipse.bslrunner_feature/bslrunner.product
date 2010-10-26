@@ -26,7 +26,7 @@
    </plugins>
 
    <features>
-      <feature id="net.bioclipse.bslrunner_feature" version="1.0.0.qualifier"/>
+      <feature id="net.bioclipse.bslrunner_feature" version="1.0.0"/>
    </features>
 
 
