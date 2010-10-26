@@ -18,7 +18,6 @@ public class Activator implements BundleActivator {
 	public void start(BundleContext bundleContext) throws Exception {
 	    System.out.println("net.bioclipse.bslrunner started");
 		Activator.context = bundleContext;
-		Console._instance.run();
 	}
 
 	/*

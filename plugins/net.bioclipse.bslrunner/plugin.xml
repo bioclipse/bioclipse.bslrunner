@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         id="net.bioclipse.bslrunner.application"
+         point="org.eclipse.core.runtime.applications">
+      <application
+            cardinality="singleton-global"
+            thread="main"
+            visible="true">
+         <run
+               class="net.bioclipse.bslrunner.Application">
+         </run>
+      </application>
+   </extension>
+   <extension
+         id="net.bioclipse.bslrunner.product"
+         point="org.eclipse.core.runtime.products">
+      <product
+            application="net.bioclipse.bslrunner.application"
+            name="BSL runner">
+      </product>
+   </extension>
+   <extension
+         id="product"
+         point="org.eclipse.core.runtime.products">
+      <product
+            application="net.bioclipse.bslrunner.application">
+         <property
+               name="appName">
+         </property>
+      </product>
+   </extension>
+
+</plugin>
