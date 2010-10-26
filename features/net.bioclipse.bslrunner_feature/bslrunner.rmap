@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rm:rmap xmlns:bc="http://www.eclipse.org/buckminster/Common-1.0" xmlns:rm="http://www.eclipse.org/buckminster/RMap-1.0">
+  <rm:locator pattern="^net\.bioclipse\.bslrunner.*" searchPathRef="bsl"/>
+  <rm:redirect href="http://pele.farmbio.uu.se/buckminster/bioclipse.core.rmap"/>
+  <rm:searchPath name="bsl">
+    <rm:provider componentTypes="osgi.bundle" readerType="local">
+      <rm:uri format="plugins/{0}">
+        <bc:propertyRef key="buckminster.component"/>
+      </rm:uri>
+    </rm:provider>
+    <rm:provider componentTypes="eclipse.feature" readerType="local">
+      <rm:uri format="features/{0}">
+        <bc:propertyRef key="buckminster.component"/>
+      </rm:uri>
+    </rm:provider>
+  </rm:searchPath>
+</rm:rmap>
