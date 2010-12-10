@@ -36,12 +36,13 @@ public class Console {
         
         Scanner scanner = new Scanner( System.in );
         String line = "exit";
-        do {
+        while (true) {
             System.out.print("BSL> ");
             line = scanner.nextLine();
+            if ( "exit".equals( line ) || "quit".equals( line ) ) {
+                System.exit( 0 );
+            }
             System.out.println( js.eval( line ) );
-            
-        } while( !"exit".equals( line ) );
-        System.exit( 0 );
+        } 
     }
 }
