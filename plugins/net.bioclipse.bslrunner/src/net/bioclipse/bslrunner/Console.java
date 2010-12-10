@@ -42,7 +42,13 @@ public class Console {
             if ( "exit".equals( line ) || "quit".equals( line ) ) {
                 System.exit( 0 );
             }
-            System.out.println( js.eval( line ) );
+            try {
+                System.out.println( js.eval( line ) );
+            }
+            catch (Exception e) {
+                System.out.println( 
+                    e.getClass().getSimpleName() + ": " + e.getMessage() );
+            }
         } 
     }
 }
