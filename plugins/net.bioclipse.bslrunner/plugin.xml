@@ -14,12 +14,15 @@
       </application>
    </extension>
    <extension
-         id="net.bioclipse.bslrunner.product"
+         id="product"
          point="org.eclipse.core.runtime.products">
       <product
             application="net.bioclipse.bslrunner.application"
-            name="BSL runner">
+            name="BSL Runner">
+         <property
+               name="appName"
+               value="BSL Runner">
+         </property>
       </product>
    </extension>
-
 </plugin>
