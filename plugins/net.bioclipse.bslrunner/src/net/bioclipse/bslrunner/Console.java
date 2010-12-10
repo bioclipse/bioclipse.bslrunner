@@ -15,6 +15,8 @@ import javax.script.ScriptEngine;
 import javax.script.ScriptEngineManager;
 import javax.script.ScriptException;
 
+import net.bioclipse.scripting.JsEnvironment;
+
 /**
  * @author jonalv
  *
@@ -23,22 +25,21 @@ public class Console {
 
     public static final Console _instance = new Console();
     
-    private ScriptEngine engine;
+    private JsEnvironment js;
     
     private Console() {
         System.out.println("Welcome to BSL-runner");
     }
     
     public void run() throws ScriptException {
-        ScriptEngineManager mgr = new ScriptEngineManager();
-        engine = mgr.getEngineByName("JavaScript");
+        js = new JsEnvironment();
         
         Scanner scanner = new Scanner( System.in );
         String line = "exit";
         do {
             System.out.print("BSL> ");
             line = scanner.nextLine();
-            System.out.println( engine.eval( line ) );
+            System.out.println( js.eval( line ) );
             
         } while( !"exit".equals( line ) );
         System.exit( 0 );
