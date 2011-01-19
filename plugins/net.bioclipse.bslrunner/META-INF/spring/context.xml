@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:osgi="http://www.springframework.org/schema/osgi"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+                      http://www.springframework.org/schema/osgi http://www.springframework.org/schema/osgi/spring-osgi.xsd">
+
+  <bean 
+    id="createJobAdvice" 
+    class="net.bioclipse.bslrunner.mocks.CreateJobAdviceMock" />
+  
+  <bean 
+    id="recordingAdvice"
+    class="net.bioclipse.bslrunner.mocks.RecordingAdviceMock" />
+  
+  <bean 
+    id="javaManagerDispatcherAdvisor"
+    class="net.bioclipse.bslrunner.mocks.JavaManagerDispatcherAdvisor" />
+
+  <bean
+    id="wrapInProxyAdvice"
+    class="net.bioclipse.bslrunner.mocks.WrapInProxyAdvice" />
+        
+  <osgi:service 
+    id="createJobAdviceOSGI" 
+    ref="createJobAdvice"
+    interface="net.bioclipse.core.api.jobs.ICreateJobAdvice" />
+                
+  <osgi:service 
+    id="recordingAdviceOSGI"
+    ref="recordingAdvice"
+    interface="net.bioclipse.core.api.recording.IRecordingAdvice" />
+  
+  <osgi:service 
+    id="javaManagerDispatcherAdvisorOSGI"
+    ref="javaManagerDispatcherAdvisor"
+    interface="net.bioclipse.core.api.managers.IJavaManagerDispatcherAdvisor" />
+    
+  <osgi:service 
+    id="wrapInProxyAdviceOSGI"
+    ref="wrapInProxyAdvice"
+    interface="net.bioclipse.core.api.recording.IWrapInProxyAdvice" />
+</beans>
