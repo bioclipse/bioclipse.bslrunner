@@ -23,11 +23,13 @@ public class JavaManagerDispatcherAdvisor
 
     @Override
     public Advice getAdvice() {
-        throw new UnsupportedOperationException();
+        throw new UnsupportedOperationException(
+                      "FIXME: JavaManagerDispatcherAdvisor.getAdvice" );
     }
 
     @Override
     public boolean isPerInstance() {
-        throw new UnsupportedOperationException();
+        throw new UnsupportedOperationException(
+                      "FIXME: JavaManagerDispatcherAdvisor.isPerInstance");
     }
 }
